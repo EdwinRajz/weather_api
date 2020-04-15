@@ -14,7 +14,7 @@ class ImageOperator {
 
   int imageRange;
 
-   String imageAssigner(int imageRange) {
+  String imageAssigner(int imageRange) {
     if (imageRange <= 232) {
       return 'lib/res/thunder.png';
     } else if (imageRange <= 321 && imageRange >= 300) {

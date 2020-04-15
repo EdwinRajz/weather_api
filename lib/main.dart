@@ -78,14 +78,10 @@ class _HomePageState extends State<HomePage> {
     final int unixDate3 = forecastData['list'][25]['dt'];
     final int unixDate4 = forecastData['list'][35]['dt'];
 
-    final DateTime timeFormatter1 =
-        DateTime.fromMicrosecondsSinceEpoch(unixDate1 * 1000000);
-    final DateTime timeFormatter2 =
-        DateTime.fromMicrosecondsSinceEpoch(unixDate2 * 1000000);
-   final DateTime timeFormatter3 =
-        DateTime.fromMicrosecondsSinceEpoch(unixDate3 * 1000000);
-    final DateTime timeFormatter4 =
-        DateTime.fromMicrosecondsSinceEpoch(unixDate4 * 1000000);
+    final DateTime timeFormatter1 = DateTime.fromMicrosecondsSinceEpoch(unixDate1 * 1000000);
+    final DateTime timeFormatter2 = DateTime.fromMicrosecondsSinceEpoch(unixDate2 * 1000000);
+    final DateTime timeFormatter3 = DateTime.fromMicrosecondsSinceEpoch(unixDate3 * 1000000);
+    final DateTime timeFormatter4 = DateTime.fromMicrosecondsSinceEpoch(unixDate4 * 1000000);
 
     setState(() {
       forecastDay1 = timeFormatter1.toIso8601String().substring(0, 10);
@@ -136,10 +132,8 @@ class _HomePageState extends State<HomePage> {
                       textBaseline: TextBaseline.ideographic,
                       children: <Widget>[
                         Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 32.0, vertical: 8.0),
-                          child: Image.network(
-                              'http://openweathermap.org/img/wn/$weatherIcon.png'),
+                          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8.0),
+                          child: Image.network('http://openweathermap.org/img/wn/$weatherIcon.png'),
                         ),
                         Container(
                           child: Text(
@@ -155,8 +149,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     Container(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 8.0),
                       child: Text(
                         '$weatherDescription',
                         style: TextStyle(
@@ -176,29 +169,25 @@ class _HomePageState extends State<HomePage> {
                         Column(
                           children: <Widget>[
                             Text(forecastDay1),
-                            Image.network(
-                                'http://openweathermap.org/img/wn/$forecastIcon1.png'),
+                            Image.network('http://openweathermap.org/img/wn/$forecastIcon1.png'),
                           ],
                         ),
                         Column(
                           children: <Widget>[
                             Text(forecastDay2),
-                            Image.network(
-                                'http://openweathermap.org/img/wn/$forecastIcon2.png'),
+                            Image.network('http://openweathermap.org/img/wn/$forecastIcon2.png'),
                           ],
                         ),
                         Column(
                           children: <Widget>[
                             Text(forecastDay3),
-                            Image.network(
-                                'http://openweathermap.org/img/wn/$forecastIcon3.png'),
+                            Image.network('http://openweathermap.org/img/wn/$forecastIcon3.png'),
                           ],
                         ),
                         Column(
                           children: <Widget>[
                             Text(forecastDay4),
-                            Image.network(
-                                'http://openweathermap.org/img/wn/$forecastIcon4.png'),
+                            Image.network('http://openweathermap.org/img/wn/$forecastIcon4.png'),
                           ],
                         ),
                       ],
